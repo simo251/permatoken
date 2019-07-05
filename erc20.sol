@@ -114,16 +114,16 @@ contract StandardToken is Token {
 
 
 
-contract CELToken is StandardToken {
+contract PermaToken is StandardToken {
 
     function () {throw;}
 
-    uint256 public initialSupply=9999 * 1e18;
-    string public name = "Cagliari Ethereum Lab";  //fancy name: eg Simon Bucks
-    uint8 public decimals=0;        //How many decimals to show. ie. There could 1000 base units with 3 decimals. Meaning 0.980 SBX = 980 base units. It's like comparing 1 wei to 1 ether.
-    string public symbol="CEL";     //An identifier: eg SBX
+    uint256 public initialSupply=10000000 * 1e18;
+    string public name = "PermaToken";  //fancy name: eg Simon Bucks
+    uint8 public decimals=18;        //How many decimals to show. ie. There could 1000 base units with 3 decimals. Meaning 0.980 SBX = 980 base units. It's like comparing 1 wei to 1 ether.
+    string public symbol="PMTO";     //An identifier: eg SBX
     string public version = 'H0.3'; //human 0.1 standard. Just an arbitrary versioning scheme.
-    function CELToken() {
+    function PermaToken() {
         balances[msg.sender] = initialSupply;
         totalSupply = initialSupply;                        // Update total supply
     }
